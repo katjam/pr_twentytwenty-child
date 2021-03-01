@@ -2,3 +2,45 @@
  Theme Name: PR Twenty Twenty child
  Template: twentytwenty
 */
+
+/*
+ Set colours in theme database
+ Colors:
+ - background: #dddddd
+ - header&footer background: #020d4c
+ - primary - slider (might want to force override)
+ */
+
+:root {
+  --pr_black: #15161b;
+  --pr_blue: #020D4C;
+  --pr_darkblue: #213177;
+  --pr_brightblue: #405cd4;
+  --pr_grey: #575a69;
+  --pr_white: #ddd;
+  --white: #fff;
+}
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: justify;
+}
+
+body a {
+  color: var(--pr_darkblue);
+}
+body a:focus,
+body a:hover {
+ color: var(--pr_brightblue);
+}
+
+.fa {
+  margin-right: 2px;
+}
+
+body main header {
+  background-color: var(--pr_grey) !important;
+  color: var(--pr_white) !important;
+  padding: 0.5em 0 !important;
+}
