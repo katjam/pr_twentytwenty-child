@@ -16,6 +16,6 @@ function my_theme_enqueue_styles() {
 add_action( 'customize_register', 'pr_2020_child_customize_register');
 
 function pr_2020_child_customize_register( $wp_customize) {
-    //$wp_customize->remove_control('custom_logo');
+    $wp_customize->remove_control('custom_logo');
     $wp_customize->remove_section('colors');
 }
