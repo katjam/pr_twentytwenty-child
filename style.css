@@ -40,7 +40,57 @@ body a:hover {
 }
 
 body main header {
-  background-color: var(--pr_grey) !important;
+  background-color: var(--pr_white) !important;
+  padding: 2em 0 !important;
+}
+
+#site-header {
+  background-color: var(--pr_blue);
+  color: var(--pr_white);
+}
+
+#site-header .site-description {
+  color: var(--pr_white);
+}
+
+.primary-menu-wrapper {
+  background-color: var(--pr_grey);
+  color: var(--pr_white);
+  padding: 0.8em;
+  text-align: left;
+}
+
+.primary-menu-wrapper ul {
+  font-size: 1.15em;
+  justify-content: space-around;
+}
+
+body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
   color: var(--pr_white) !important;
-  padding: 0.5em 0 !important;
+}
+
+.post-inner {
+  padding-top: 2em;
+}
+
+header .contact {
+  text-align: right;
+}
+
+header .contact a.linkedin {
+  color: #0e76a8;
+}
+
+header .contact a {
+  color: var(--pr-white);
+  text-decoration: none;
+}
+
+header .contact a:hover,
+header .contact a:focus {
+  text-decoration: underline;
+}
+
+header .contact div {
+  padding-bottom: 10px;
 }
