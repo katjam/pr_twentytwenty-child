@@ -1,12 +1,6 @@
 <?php
 /**
- * Header file for the Twenty Twenty WordPress default theme.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * Header file for PR Twenty Twenty child theme.
  */
 
 ?><!DOCTYPE html>
@@ -14,37 +8,24 @@
 <html class="no-js" <?php language_attributes(); ?>>
 
 	<head>
-
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-
 		<link rel="profile" href="https://gmpg.org/xfn/11">
-
 		<?php wp_head(); ?>
-
 	</head>
 
 	<body <?php body_class(); ?>>
-
 		<?php
 		wp_body_open();
 		?>
-
 		<header id="site-header" class="header-footer-group" role="banner">
-
 			<div class="header-inner section-inner">
-
 				<div class="header-titles-wrapper">
-
 					<?php
-
 					// Check whether the header search is activated in the customizer.
 					$enable_header_search = get_theme_mod( 'enable_header_search', true );
-
 					if ( true === $enable_header_search ) {
-
 						?>
-
 						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 							<span class="toggle-inner">
 								<span class="toggle-icon">
@@ -53,19 +34,21 @@
 								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'twentytwenty' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
-
 					<?php } ?>
 
 					<div class="header-titles">
-
+                        <div class="site-logo faux-heading">
+                            <a href="<?php esc_url(home_url('/')); ?>" rel="home" aria-current="page">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logov2.svg" style="height: 92px; width: 300px;" class="custom-logo" alt="Philips Rogers logo" />
+                            </a>
+                            <span class="screen-reader-text">
+                                Philips Rogers
+                            </span>
+                        </div>
 						<?php
-							// Site title or logo.
-							twentytwenty_site_logo();
-
-							// Site description.
+                        // Site description.
 							twentytwenty_site_description();
 						?>
-
 					</div><!-- .header-titles -->
 
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
