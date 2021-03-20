@@ -53,6 +53,31 @@ if ( true === $enable_header_search ) {
 
 
                 </div><!-- .header-titles-wrapper -->
+                <div class="contact">
+                    <span>
+                        <a href="mailto:info@philipsrogers.co.uk" class="mailto">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                        <a href="mailto:info@philipsrogers.co.uk">
+                            info@philipsrogers.co.uk
+                        </a>
+                    </span>
+                    <div>
+                        <span>
+                            <a href="tel:01208 812 812">
+                                <i class="fa fa-phone"></i>
+                            </a>
+                            <a href="tel:01208 812 812">
+                                01208 812 812
+                            </a>
+                        </span>
+                     </div>
+                     <div>
+                         <a class="linkedin" href="https://uk.linkedin.com/company/philips-rogers-ltd" title="View Philips Rogers\'s Linkedin Profile" target="_blank">
+                             <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                          </a>
+                     </div>
+                </div>
             </div><!-- .header-inner -->
             <button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
                 <span class="toggle-inner">
