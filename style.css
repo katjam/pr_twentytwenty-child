@@ -126,3 +126,38 @@ header .contact a:focus {
 header .contact div {
   padding-bottom: 10px;
 }
+
+h1 {
+  color: var(--pr_black);
+}
+
+#site-footer {
+  background-color: var(--pr_black);
+  color: var(--pr_grey);
+}
+
+#site-footer .info {
+  font-size: 0.8em;
+  padding: 0 0.8em;
+}
+
+#site-footer .rics-logo {
+  margin: 0 8rem;
+}
+
+#site-footer p {
+  margin-bottom: 0;
+}
+
+#site-footer .footer-copyright {
+  padding: 1em 0;
+}
+
+a.to-the-top {
+  min-width: 32px;
+}
+
+a.to-the-top:hover,
+a.to-the-top:focus {
+  color: var(--pr_white);
+}
