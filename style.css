@@ -44,6 +44,11 @@ body main header {
   padding: 2em 0 !important;
 }
 
+.header-inner,
+.section-inner {
+  max-width: 120rem;
+}
+
 #site-header {
   background-color: var(--pr_blue);
   color: var(--pr_white);
@@ -51,22 +56,42 @@ body main header {
 
 #site-header .site-description {
   color: var(--pr_white);
+  display: unset;
 }
 
 .primary-menu-wrapper {
   background-color: var(--pr_grey);
   color: var(--pr_white);
-  padding: 0.8em;
-  text-align: left;
+  padding: 0.8em 4em;
 }
 
 .primary-menu-wrapper ul {
   font-size: 1.15em;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.nav-toggle {
+  top: 10px;
+  bottom: unset;
+}
+
+.toggle-text,
+#site-header .toggle,
+.menu-modal .toggle {
+  color: var(--pr_white) !important;
+}
+
+.menu-modal,
+.menu-modal-inner {
+  background-color: var(--pr_grey);
 }
 
 body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
   color: var(--pr_white) !important;
+}
+
+body:not(.enable-search-modal) .header-titles-wrapper {
+  padding: 0 4rem;
 }
 
 .post-inner {
@@ -75,6 +100,13 @@ body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .pri
 
 header .contact {
   text-align: right;
+}
+
+@media (max-width: 782px) {
+  header .contact {
+    text-align: center;
+    padding-top: 1em;
+  }
 }
 
 header .contact a.linkedin {
