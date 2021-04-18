@@ -8,12 +8,12 @@
 
   <?php $display_listings = get_post_meta($post->ID, 'pr_property_teasers', true); ?>
   <?php if ($display_listings === 'on'): ?>
-    <h2>Available Property:</h2>
+    <h2 class="alignwide">Available Property:</h2>
     <?php $prop_query = new WP_Query(array('post_type' => 'property_listing'));
       if ($prop_query->have_posts()) :
         while ($prop_query->have_posts()) : $prop_query->the_post();
         ?>
-        <div>
+        <div class="wp-block-group alignwide has-background" style="background-color: #d3d3d3">
         <?php $status = get_post_meta( get_the_ID(), 'pr_property_listing_status', true); ?>
           <div>
             <div class="pr-prop-teaser-image">
