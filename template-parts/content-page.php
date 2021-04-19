@@ -25,7 +25,8 @@ $property_highlights = isset($details['highlights']) ? $details['highlights'] : 
 $property_teaser = isset($details['teaser']) ? $details['teaser'] : '';
 $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
 $status = get_post_meta( get_the_ID(),'pr_property_listing_status', true);
-$disposal_type = get_post_meta( get_the_ID(),'pr_property_disposal_type', true);
+$disposal_type_array = unserialize(get_post_meta( get_the_ID(),'pr_property_disposal_type', true));
+$disposal_type = implode(' / ', $disposal_type_array);
 ?>
           <div class="row">
             <div class="column">
