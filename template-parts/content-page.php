@@ -43,28 +43,22 @@ $disposal_type = get_post_meta( get_the_ID(),'pr_property_disposal_type', true);
           </div>
           <div>
             <?php if ($disposal_type) :?>
-            <p class="detail disposal"><?= nl2br($disposal_type) ?></p>
+            <div class="detail disposal"><?= nl2br($disposal_type) ?></div>
             <?php endif; ?>
-            <?php if ($property_size) :?>
-            <p class="detail size">
-              <span class="fa fa-arrows-alt"></span> <?= $property_size ?>
-            </p>
-            <?php endif; ?>
-            <?php if ($property_price) :?>
-            <p class="detail price">
-              <span class="fa fa-gbp"></span> <?= $property_price ?>
-            </p>
-            <?php endif; ?>
-            <?php if ($property_highlights) :?>
-            <p class="detail highlights">
-              <span class="fa fa-star"></span> <?= $property_highlights ?>
-            </p>
-            <?php endif; ?>
-            <?php if ($property_teaser) :?>
-            <p class="detail teaser">
-              <span class="fa fa-check"></span> <?= $property_teaser ?>
-            </p>
-            <?php endif; ?>
+            <ul>
+              <?php if ($property_size) :?>
+              <li class="detail size"><?= $property_size ?></li>
+              <?php endif; ?>
+              <?php if ($property_price) :?>
+              <li class="detail price"><?= $property_price ?></li>
+              <?php endif; ?>
+              <?php if ($property_highlights) :?>
+              <li class="detail highlights"><?= $property_highlights ?></li>
+              <?php endif; ?>
+              <?php if ($property_teaser) :?>
+              <li class="detail teaser"><?= $property_teaser ?></li>
+              <?php endif; ?>
+            </ul>
             <div class="row">
               <div class="column">
                 <a href="<?php the_permalink(); ?>" class="button">

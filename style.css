@@ -125,10 +125,15 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   border-radius: 10px;
 }
 
-p.detail.disposal {
+.property-card ul {
+  margin: 1em 0.5em;
+}
+
+.detail.disposal {
   border-bottom: 2px solid var(--pr_grey);
   border-top: 2px solid var(--pr_grey);
-  padding: 1em 0;
+  font-size: 1.2em;
+  padding: 0.5em 0;
   text-transform: uppercase;
 }
 
