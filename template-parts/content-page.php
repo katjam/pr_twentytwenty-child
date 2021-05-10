@@ -29,7 +29,7 @@ $disposal_type_array = unserialize(get_post_meta( get_the_ID(),'pr_property_disp
 $disposal_type = implode(' / ', $disposal_type_array);
 ?>
           <div class="row">
-            <div class="column">
+            <div class="column main-image">
             <?php the_post_thumbnail('medium'); ?>
             <?php if ($status && $status !== 'None'): ?>
               <span class="status"><?=$status?></span>
