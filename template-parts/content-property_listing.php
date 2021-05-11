@@ -19,6 +19,9 @@
     <header class="entry-header has-text-align-center header-footer-group">
       <div class="entry-header-inner section-inner medium">
         <h1 class="entry-title"><?= $page_heading ?></h1>
+        <?php if($status && $status !== 'None'): ?>
+          <h3 class="status"><?=$status?></h3>
+        <?php endif; ?>
         <h3 class="detail disposal"><?= $disposal_type ?></h3>
         <?php if($pdf && $pdf['url'] != '' ): ?>
         <div class="pdf">
@@ -39,10 +42,6 @@
     <?php get_template_part( 'template-parts/featured-image' ) ?>
     <div class="post-inner">
       <div class="entry-content">
-
-        <?php if($status && $status !== 'None'): ?>
-          <h3 class="status"><?=$status?></h3>
-        <?php endif; ?>
         <div>
             <?php the_content(); ?>
         </div>
