@@ -40,7 +40,7 @@
       </div>
     </header>
     <?php get_template_part( 'template-parts/featured-image' ) ?>
-    <div class="post-inner">
+    <div class="post-inner alignwide">
       <div class="entry-content">
         <div>
             <?php the_content(); ?>

@@ -65,7 +65,7 @@ if ( true === $enable_header_search ) {
                     <div>
                         <span>
                             <a href="tel:01208 812 812">
-                                <i class="fa fa-phone"></i>
+                                <i class="fa fa-phone fa-flip-horizontal"></i>
                             </a>
                             <a href="tel:01208 812 812">
                                 01208 812 812
