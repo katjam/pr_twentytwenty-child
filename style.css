@@ -110,6 +110,11 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 
 /** Property single **/
 
+.singular.single-property_listing .entry-header .status {
+  background: var(--pr_red);
+  color: var(--pr_white);
+}
+
 .singular.single-property_listing .entry-content .pdf {
   text-align: center;
   margin: 0 auto;
