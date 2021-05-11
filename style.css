@@ -81,7 +81,9 @@ body main header {
 
 .primary-menu-wrapper ul {
   font-size: 1.15em;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 120rem;
 }
 
 .nav-toggle {
@@ -105,7 +107,7 @@ body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .pri
 }
 
 body:not(.enable-search-modal) .header-titles-wrapper {
-  padding: 0 4rem;
+  padding: 0 1.3em;
 }
 
 /** Property single **/
@@ -256,7 +258,7 @@ header .contact a:focus {
 }
 
 header .contact div {
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
 h1 {
