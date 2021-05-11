@@ -108,6 +108,29 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   padding: 0 4rem;
 }
 
+/** Property single **/
+
+.singular.single-property_listing .entry-content .pdf {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.singular.single-property_listing .detail.summary h2 {
+  font-size: 3rem;
+  margin: 2rem auto 1rem;
+}
+
+.singular.single-property_listing .detail.summary h3 {
+  font-size: 2rem;
+  margin: 2rem auto 1rem;
+}
+
+.singular.single-property_listing .featured-media::before {
+  background: none;
+}
+
+/** Property single end */
+
 /** Property teaser **/
 
 .property-card {
