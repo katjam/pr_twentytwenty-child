@@ -22,6 +22,7 @@ $property_address = isset($details['address']) ? $details['address'] : '';
 $property_size = isset($details['size']) ? $details['size'] : '';
 $property_price = isset($details['price']) ? $details['price'] : '';
 $property_highlights = isset($details['highlights']) ? $details['highlights'] : '';
+$property_highlights2 = isset($details['highlights2']) ? $details['highlights2'] : '';
 $property_teaser = isset($details['teaser']) ? $details['teaser'] : '';
 $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
 $status = get_post_meta( get_the_ID(),'pr_property_listing_status', true);
@@ -60,7 +61,10 @@ if (is_array($disposal_type_array)) {
               <?php if ($property_highlights) :?>
               <li class="detail highlights"><?= $property_highlights ?></li>
               <?php endif; ?>
-              <?php if ($property_teaser) :?>
+              <?php if ($property_highlights2) :?>
+              <li class="detail highlights"><?= $property_highlights2 ?></li>
+              <?php endif; ?>
+             <?php if ($property_teaser) :?>
               <li class="detail teaser"><?= $property_teaser ?></li>
               <?php endif; ?>
             </ul>
