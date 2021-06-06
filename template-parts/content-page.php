@@ -26,7 +26,11 @@ $property_teaser = isset($details['teaser']) ? $details['teaser'] : '';
 $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
 $status = get_post_meta( get_the_ID(),'pr_property_listing_status', true);
 $disposal_type_array = unserialize(get_post_meta( get_the_ID(),'pr_property_disposal_type', true));
-$disposal_type = implode(' / ', $disposal_type_array);
+if (is_array($disposal_type_array)) {
+  $disposal_type = implode(' / ', $disposal_type_array);
+} else {
+  $disposal_type = "";
+}
 ?>
           <div class="row">
             <div class="column main-image">
