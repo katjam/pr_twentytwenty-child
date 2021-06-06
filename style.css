@@ -51,8 +51,8 @@
 html,
 body,
 .entry-content {
-  /*font-family: 'Calibre', sans-serif;*/
-  font-family: 'LatoWeb', sans-serif;
+  font-family: 'Calibre', sans-serif;
+  /*font-family: 'LatoWeb', sans-serif;*/
   text-align: justify;
 }
 
