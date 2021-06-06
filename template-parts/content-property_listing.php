@@ -8,7 +8,7 @@
   $property_size = isset($details['size']) ? $details['size'] : '';
   $property_price = isset($details['price']) ? $details['price'] : '';
   $property_highlights = isset($details['highlights']) ? $details['highlights'] : '';
-  $property_teaser = isset($details['teaser']) ? $details['teaser'] : '';
+  $property_highlights2 = isset($details['highlights2']) ? $details['highlights2'] : '';
   $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
   $status = get_post_meta( get_the_ID(),'pr_property_listing_status', true);
   $disposal_type_array = unserialize(get_post_meta( get_the_ID(),'pr_property_disposal_type', true));
@@ -35,7 +35,7 @@
           <h3><?= $property_size ?></h3>
           <h3><?= $property_price ?></h3>
           <h3><?= $property_highlights ?></h3>
-          <h3><?= $property_teaser ?></h3>
+          <h3><?= $property_highlights2 ?></h3>
         </div>
       </div>
     </header>
