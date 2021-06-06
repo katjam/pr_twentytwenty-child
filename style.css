@@ -37,6 +37,29 @@ body a:hover {
  color: var(--pr_brightblue);
 }
 
+h1,
+.heading-size-1 {
+  font-size: 5rem;
+}
+h2,
+.heading-size-2 {
+  font-size: 3.5rem;
+}
+h3,
+.heading-size-3 {
+  font-size: 2.5rem;
+}
+h4,
+.heading-size-4 {
+  font-size: 2rem;
+}
+h5,
+h6,
+.heading-size-5,
+.heading-size-6 {
+  font-size: 1.5rem;
+}
+
 body a.button {
   background-color: var(--pr_darkblue);
   border-radius: 10px;
@@ -55,7 +78,7 @@ body a.button:hover {
 
 body main header {
   background-color: var(--pr_white) !important;
-  padding: 2em 0 !important;
+  padding: 1em 0 !important;
 }
 
 .header-inner,
@@ -114,6 +137,15 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   padding: 0;
 }
 
+body .entry-content > .alignwide:not(.property-card) {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+body .post-inner {
+  padding-top: 1rem;
+}
+
 /** Property single **/
 
 .singular.single-property_listing .entry-header .status {
@@ -149,6 +181,10 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 2.8em;
   transition: 0.3s;
+}
+
+.property-card h3 {
+  text-align: left;
 }
 
 @media (max-width: 782px) {
