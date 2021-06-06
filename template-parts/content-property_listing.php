@@ -42,7 +42,7 @@
     <?php get_template_part( 'template-parts/featured-image' ) ?>
     <div class="post-inner alignwide">
       <div class="entry-content">
-        <div>
+        <div class="alignwide">
             <?php the_content(); ?>
         </div>
         <?php if($pdf && $pdf['url'] != '' ): ?>
