@@ -76,7 +76,7 @@ h6,
 
 h1,
 .heading-size-1 {
-  font-size: 5rem;
+  font-size: 5.2rem;
 }
 h2,
 .heading-size-2 {
@@ -115,7 +115,7 @@ body a.button:hover {
 
 body main header {
   background-color: var(--pr_white) !important;
-  padding: 1em 0 !important;
+  padding: 1.8em 0 !important;
 }
 
 .header-inner,
@@ -131,6 +131,7 @@ body main header {
 #site-header .site-description {
   color: var(--pr_white);
   display: unset;
+  font-size: 2rem;
 }
 
 .primary-menu-wrapper {
@@ -180,7 +181,7 @@ body .entry-content > .alignwide:not(.property-card) {
 }
 
 body .post-inner {
-  padding-top: 1rem;
+  padding-top: 0;
 }
 
 /** Property single **/
