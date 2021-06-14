@@ -374,11 +374,11 @@ h1 {
 
 #site-footer .info {
   font-size: 0.8em;
-  padding: 0 0.8em;
+  padding: 0;
 }
 
-#site-footer .rics-logo {
-  margin: 0 8rem;
+#site-footer .section-inner {
+  align-items: unset;
 }
 
 #site-footer p {
