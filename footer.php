@@ -28,27 +28,10 @@ echo date_i18n(
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
                         </p><!-- .footer-copyright -->
                     </div>
-                    <div class="rics-logo">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/REGULATED-BY-RICS-LOGO_WHITE.png" />
-                    </div>
-
                 </div><!-- .footer-credits -->
-
-                <a class="to-the-top" href="#site-header">
-                    <span class="to-the-top-long">
-<?php
-/* translators: %s: HTML character for up arrow. */
-printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-?>
-                    </span><!-- .to-the-top-long -->
-                    <span class="to-the-top-short">
-<?php
-/* translators: %s: HTML character for up arrow. */
-printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-?>
-                    </span><!-- .to-the-top-short -->
-                </a><!-- .to-the-top -->
-
+                <div class="rics-logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/REGULATED-BY-RICS-LOGO_WHITE.png" />
+                </div>
             </div><!-- .section-inner -->
 
         </footer><!-- #site-footer -->

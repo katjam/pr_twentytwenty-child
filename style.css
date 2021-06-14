@@ -74,27 +74,31 @@ h6,
   letter-spacing: normal;
 }
 
+h1, .entry-content h2, .entry-content h3 {
+  margin: 1.8rem auto;
+}
+
 h1,
 .heading-size-1 {
-  font-size: 5.2rem;
+  font-size: 3.2rem;
 }
 h2,
 .heading-size-2 {
-  font-size: 3.5rem;
+  font-size: 2.3rem;
 }
 h3,
 .heading-size-3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 h4,
 .heading-size-4 {
-  font-size: 2rem;
+  font-size: 0.8rem;
 }
 h5,
 h6,
 .heading-size-5,
 .heading-size-6 {
-  font-size: 1.5rem;
+  font-size: 0.5rem;
 }
 
 body a.button {
@@ -115,11 +119,12 @@ body a.button:hover {
 
 body main header {
   background-color: var(--pr_white) !important;
-  padding: 1.8em 0 !important;
+  padding: 1.8em 0 0 0 !important;
 }
 
 .header-inner,
-.section-inner {
+.section-inner.medium,
+section-inner {
   max-width: 120rem;
 }
 
@@ -137,7 +142,7 @@ body main header {
 .primary-menu-wrapper {
   background-color: var(--pr_grey);
   color: var(--pr_white);
-  padding: 0.8em 4em;
+  padding: 0.8em 1.8em;
 }
 
 .primary-menu-wrapper ul {
@@ -180,6 +185,10 @@ body .entry-content > .alignwide:not(.property-card) {
   margin-bottom: 1.5rem !important;
 }
 
+body .entry-content > .alignwide.property-card {
+  margin-top: 1rem !important;
+  margin-bottom: 4rem !important;
+}
 body .post-inner {
   padding-top: 0;
 }
@@ -365,11 +374,11 @@ h1 {
 
 #site-footer .info {
   font-size: 0.8em;
-  padding: 0 0.8em;
+  padding: 0;
 }
 
-#site-footer .rics-logo {
-  margin: 0 8rem;
+#site-footer .section-inner {
+  align-items: unset;
 }
 
 #site-footer p {
@@ -380,11 +389,15 @@ h1 {
   padding: 1em 0;
 }
 
-a.to-the-top {
-  min-width: 32px;
-}
+@media (max-width: 782px) {
+  #site-footer .section-inner {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px;
+  }
 
-a.to-the-top:hover,
-a.to-the-top:focus {
-  color: var(--pr_white);
+  #site-footer img {
+    margin: auto;
+  }
 }

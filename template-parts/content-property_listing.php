@@ -16,7 +16,7 @@
 ?>
 
 <article <?php post_class(); ?> id="post-<?= $id; ?>">
-    <header class="entry-header has-text-align-center header-footer-group">
+    <header class="entry-header header-footer-group">
       <div class="entry-header-inner section-inner medium">
         <h1 class="entry-title"><?= $page_heading ?></h1>
         <?php if($status && $status !== 'None'): ?>
