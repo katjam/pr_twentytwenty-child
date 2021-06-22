@@ -6,14 +6,41 @@
     <?php the_content(); ?>
   </div>
 
-  <?php $display_listings = get_post_meta($post->ID, 'pr_property_teasers', true); ?>
-  <?php if ($display_listings === 'on'): ?>
+  <?php $display_current = get_post_meta($post->ID, 'pr_current_listing', true); ?>
+  <?php $display_completed = get_post_meta($post->ID, 'pr_completed_listing', true); ?>
+  <?php if ($display_current || $display_completed): ?>
+  <?php if ($display_current === 'on') { ?>
     <h2 class="alignwide">Available Property:</h2>
-    <?php $prop_query = new WP_Query(array('post_type' => 'property_listing'));
-      if ($prop_query->have_posts()) :
-        while ($prop_query->have_posts()) : $prop_query->the_post();
-        ?>
-        <div class="wp-block-group alignwide property-card">
+  <?php $prop_query = new WP_Query(
+    array(
+      'post_type' => 'property_listing',
+      'meta_query' => array(
+        array(
+          'key' => 'pr_property_display_as',
+          'value' => 'Current'
+        )
+      )
+    )
+  );
+  }
+  if ($display_completed === 'on') { ?>
+    <h2 class="alignwide">Completed Projects:</h2>
+  <?php $prop_query = new WP_Query(
+    array(
+      'post_type' => 'property_listing',
+      'meta_query' => array(
+        array(
+          'key' => 'pr_property_display_as',
+          'value' => 'Completed'
+        )
+      )
+    )
+  );
+  }
+  if ($prop_query->have_posts()) :
+    while ($prop_query->have_posts()) : $prop_query->the_post();
+?>
+    <div class="wp-block-group alignwide property-card">
 <?php
 // detail keys: teaser, highlights, price, size, address, type
 $details = get_post_meta( get_the_ID(),'pr_property_details', true);
