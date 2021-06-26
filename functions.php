@@ -1,6 +1,6 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
+add_action( 'wp_enqueue_scripts', 'pr_enqueue_styles' );
+function pr_enqueue_styles() {
     $parenthandle = 'twenty-twenty-style';
     $theme = wp_get_theme();
     wp_enqueue_style( $parenthandle, get_template_directory_uri() . '/style.css',
@@ -11,6 +11,11 @@ function my_theme_enqueue_styles() {
         array( $parenthandle ),
         $theme->get('Version') // this only works if you have Version in the style header
     );
+}
+
+add_action( 'wp_enqueue_scripts', 'pr_add_lightbox' );
+function pr_add_lightbox() {
+  wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/lightbox.js');
 }
 
 add_action( 'customize_register', 'pr_2020_child_customize_register');

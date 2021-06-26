@@ -1,0 +1,1 @@
+/home/katja/public_html/elm-lightbox/lightbox.js
