@@ -3,9 +3,10 @@
  * Displays the post gallery in a lightbox
  */
 
-// The images src will have thumbnail size appended to them
-// e.g.  -150x150 the elm processes to get full and thumb src
-$image_ids = get_post_gallery(get_the_ID(), false)['ids'];
+$image_data = get_post_gallery(get_the_ID(), false);
+
+if ( $image_data && ! post_password_required() ) {
+$image_ids = $image_data['ids'];
 $image_urls = [];
 
 foreach (explode(',',$image_ids) as $id) {
@@ -15,7 +16,6 @@ foreach (explode(',',$image_ids) as $id) {
   ];
 }
 
-if ( (count($image_urls) > 0) && ! post_password_required() ) {
 
     $featured_media_inner_classes = '';
 
