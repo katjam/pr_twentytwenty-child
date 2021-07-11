@@ -5,7 +5,15 @@
 
 // The images src will have thumbnail size appended to them
 // e.g.  -150x150 the elm processes to get full and thumb src
-$image_urls = get_post_gallery_images(get_the_ID());
+$image_ids = get_post_gallery(get_the_ID(), false)['ids'];
+$image_urls = [];
+
+foreach (explode(',',$image_ids) as $id) {
+  $image_urls[] = [
+    'thumbSrc' => wp_get_attachment_image_src($id, 'thumbnail')[0],
+    'fullSrc' => wp_get_attachment_image_src($id, 'large')[0]
+  ];
+}
 
 if ( (count($image_urls) > 0) && ! post_password_required() ) {
 
