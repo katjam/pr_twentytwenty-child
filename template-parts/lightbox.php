@@ -1,9 +1,13 @@
 <?php
 /**
- * Displays the featured image
+ * Displays the post gallery in a lightbox
  */
 
-if ( has_post_thumbnail() && ! post_password_required() ) {
+// The images src will have thumbnail size appended to them
+// e.g.  -150x150 the elm processes to get full and thumb src
+$image_urls = get_post_gallery_images(get_the_ID());
+
+if ( (count($image_urls) > 0) && ! post_password_required() ) {
 
     $featured_media_inner_classes = '';
 
@@ -15,9 +19,7 @@ if ( has_post_thumbnail() && ! post_password_required() ) {
     <figure class="featured-media">
 
         <div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
-    <!-- The images src will have thumbnail size appended to them -->
-    <!-- e.g.  -150x150 the elm processes to get full and thumb src -->
-    <?php $image_urls = get_post_gallery_images(get_the_ID())?>
+
     <div id="lightbox"></div>
     <script>
       var app = Elm.LightBox.init({
