@@ -12,7 +12,8 @@ $image_urls = [];
 foreach (explode(',',$image_ids) as $id) {
   $image_urls[] = [
     'thumbSrc' => wp_get_attachment_image_src($id, 'thumbnail')[0],
-    'fullSrc' => wp_get_attachment_image_src($id, 'large')[0]
+    'fullSrc' => wp_get_attachment_image_src($id, 'large')[0],
+    'altText' => get_post_meta( $id, '_wp_attachment_image_alt', true )
   ];
 }
 
