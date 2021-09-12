@@ -62,7 +62,7 @@ if (is_array($disposal_type_array)) {
 ?>
           <div class="row">
             <div class="column main-image">
-            <?php the_post_thumbnail('medium'); ?>
+            <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "true"] ) ?>
             <?php if ($status && $status !== 'None'): ?>
               <span class="status"><?=$status?></span>
             <?php endif; ?>

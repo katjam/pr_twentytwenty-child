@@ -4,6 +4,7 @@
  */
 
 $image_data = get_post_gallery(get_the_ID(), false);
+$is_teaser = isset($args['isteaser']) ? $args['isteaser'] : "false";
 
 if ( $image_data && ! post_password_required() ) {
 $image_ids = $image_data['ids'];
@@ -33,7 +34,10 @@ foreach (explode(',',$image_ids) as $id) {
     <script>
       var app = Elm.LightBox.init({
       node: document.getElementById('lightbox'),
-      flags: <?= json_encode($image_urls) ?>
+      flags: {
+        isTeaser: <?= json_encode($is_teaser) ?>,
+        imageList: <?= json_encode($image_urls) ?>
+      }
     });
     </script>
         </div><!-- .featured-media-inner -->
