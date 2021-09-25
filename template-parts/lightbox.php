@@ -27,21 +27,16 @@ foreach (explode(',',$image_ids) as $id) {
     }
 ?>
     <figure class="featured-media">
-
-        <div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
-
-    <div id="lightbox"></div>
-    <script>
-      var app = Elm.LightBox.init({
-      node: document.getElementById('lightbox'),
-      flags: {
-        isTeaser: <?= json_encode($is_teaser) ?>,
-        imageList: <?= json_encode($image_urls) ?>
-      }
-    });
-    </script>
-        </div><!-- .featured-media-inner -->
-
+      <div id="lightbox"></div>
+      <script>
+        var app = Elm.LightBox.init({
+        node: document.getElementById('lightbox'),
+        flags: {
+          isTeaser: <?= json_encode($is_teaser) ?>,
+          imageList: <?= json_encode($image_urls) ?>
+        }
+      });
+      </script>
     </figure><!-- .featured-media -->
 
 <?php
