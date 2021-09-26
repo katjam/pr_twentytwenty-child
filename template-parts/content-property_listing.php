@@ -12,7 +12,7 @@
   $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
   $status = get_post_meta( get_the_ID(),'pr_property_listing_status', true);
   $disposal_type_array = unserialize(get_post_meta( get_the_ID(),'pr_property_disposal_type', true));
-  $disposal_type = implode(' / ', $disposal_type_array);
+  $disposal_type = is_array($disposal_type_array) ? implode(' / ', $disposal_type_array) : '';
 ?>
 
 <article <?php post_class(); ?> id="post-<?= $id; ?>">
