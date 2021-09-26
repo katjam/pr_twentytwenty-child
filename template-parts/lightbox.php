@@ -4,6 +4,7 @@
  */
 
 $image_data = get_post_gallery(get_the_ID(), false);
+$is_teaser = isset($args['isteaser']) ? $args['isteaser'] : "false";
 
 if ( $image_data && ! post_password_required() ) {
 $image_ids = $image_data['ids'];
@@ -17,27 +18,20 @@ foreach (explode(',',$image_ids) as $id) {
   ];
 }
 
-
-    $featured_media_inner_classes = '';
-
-    // Make the featured media thinner on archive pages.
-    if ( ! is_singular() ) {
-        $featured_media_inner_classes .= ' medium';
-    }
 ?>
-    <figure class="featured-media">
-
-        <div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
-
-    <div id="lightbox"></div>
-    <script>
-      var app = Elm.LightBox.init({
-      node: document.getElementById('lightbox'),
-      flags: <?= json_encode($image_urls) ?>
-    });
-    </script>
-        </div><!-- .featured-media-inner -->
-
+    <figure class="<?php echo $is_teaser === 'true' ? '' : 'featured-media' ?>">
+      <div class="<?php echo $is_teaser === 'true' ? '' : 'section-inner' ?>">
+        <div id="lightbox"></div>
+        <script>
+          var app = Elm.LightBox.init({
+          node: document.getElementById('lightbox'),
+          flags: {
+            isTeaser: <?= json_encode($is_teaser) ?>,
+            imageList: <?= json_encode($image_urls) ?>
+          }
+        });
+        </script>
+      </div>
     </figure><!-- .featured-media -->
 
 <?php

@@ -39,7 +39,7 @@
         </div>
       </div>
     </header>
-    <?php get_template_part( 'template-parts/lightbox' ) ?>
+    <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "false"] ) ?>
     <div class="post-inner alignwide">
       <div class="entry-content">
         <div class="alignwide">
