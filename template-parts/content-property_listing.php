@@ -19,10 +19,13 @@
     <header class="entry-header header-footer-group">
       <div class="entry-header-inner section-inner medium">
         <h1 class="entry-title"><?= $page_heading ?></h1>
-        <?php if($status && $status !== 'None'): ?>
-          <h3 class="status"><?=$status?></h3>
-        <?php endif; ?>
-        <h3 class="detail disposal"><?= $disposal_type ?></h3>
+
+        <h3 class="detail disposal">
+          <?= $disposal_type ?>
+          <?php if($status && $status !== 'None'): ?>
+            <span class="status"><?=$status?></span>
+          <?php endif; ?>
+        </h3>
         <?php if($pdf && $pdf['url'] != '' ): ?>
         <div class="pdf">
           <a href="<?php echo $pdf['url']; ?>" role="button" class="button">
