@@ -252,6 +252,31 @@ body .post-inner {
   }
 }
 
+/* Media queries for lightbox */
+@media (max-width: 1024px) {
+  .property_listing .wrap-center div {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 525px) {
+  .property_listing svg {
+    width: 20px !important;
+  }
+
+  .property_listing .featured-media .section-inner {
+    width: 100%;
+  }
+  
+  .property_listing .minimal-padding {
+    padding: 0.2rem;
+  }
+
+  .property_listing .minimal-padding .spacing-20-20.r > .s + .s {
+    margin: 0;
+  }
+}
+
 /* On mouse-over, add a deeper shadow */
 .property-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
