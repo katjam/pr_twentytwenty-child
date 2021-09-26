@@ -60,7 +60,7 @@ if (is_array($disposal_type_array)) {
   $disposal_type = "";
 }
 ?>
-          <div class="row">
+          <div class="row teaser-header">
             <div class="wp-block-column main-image">
             <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "true"] ) ?>
             <?php if ($status && $status !== 'None'): ?>
