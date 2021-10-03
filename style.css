@@ -200,26 +200,34 @@ body .post-inner {
 }
 
 .page-content.landing-page .wp-block-columns.has-background {
-}
-
-.page-content.landing-page .wp-block-columns.has-background {
    padding: 0;
-   margin: 0;
 }
 
 .page-content.landing-page .wp-block-columns.has-background p {
   color: #ddd;
+}
+
+.page-content.landing-page .wp-block-columns {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page-content.landing-page .wp-block-columns p {
   padding: 15px;
 }
 
 .page-content.landing-page .wp-block-column:not(:first-child) {
-    margin-left: 5px;
+  margin-left: 10px;
+}
+
+.page-content.landing-page .wp-block-cover {
+  height: 100%;
 }
 
 .page-content.landing-page .wp-block-cover__inner-container {
-  left: 0;
+  left: 7%;
   position: absolute;
-  top: 20%;
+  top: 10%;
 }
 
 /** End Landing page - 3 images **/
