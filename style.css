@@ -147,13 +147,13 @@ section-inner {
 
 .primary-menu-wrapper ul {
   font-size: 1.15em;
-  justify-content: space-between;
+  justify-content: left;
   margin: auto;
   max-width: 120rem;
 }
 
 .primary-menu-wrapper ul li {
-  margin: 0;
+  margin: 0 1em 0 0;
 }
 
 .nav-toggle {
