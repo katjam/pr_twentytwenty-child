@@ -26,7 +26,9 @@ echo date_i18n(
 );
 ?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-                        </p><!-- .footer-copyright -->
+                            <span style="float: right"><a href="<?php echo esc_url( home_url( '/privacy-policy' ) ); ?>">Privacy Policy</a></span>
+
+                        </p><!-- .footer-copyright and privacy -->
                     </div>
                 </div><!-- .footer-credits -->
                 <div class="rics-logo">
