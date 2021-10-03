@@ -193,6 +193,38 @@ body .post-inner {
   padding-top: 0;
 }
 
+/** Landing page - 3 images **/
+
+.page-content.landing-page .wp-block-cover {
+  margin: 0 !important;
+}
+
+.page-content.landing-page .wp-block-columns.has-background {
+}
+
+.page-content.landing-page .wp-block-columns.has-background {
+   padding: 0;
+   margin: 0;
+}
+
+.page-content.landing-page .wp-block-columns.has-background p {
+  color: #ddd;
+  padding: 15px;
+}
+
+.page-content.landing-page .wp-block-column:not(:first-child) {
+    margin-left: 5px;
+}
+
+.page-content.landing-page .wp-block-cover__inner-container {
+  left: 0;
+  position: absolute;
+  top: 20%;
+}
+
+/** End Landing page - 3 images **/
+
+
 /** Property single **/
 
 .singular.single-property_listing .entry-header .status {
