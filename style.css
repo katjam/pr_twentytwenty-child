@@ -193,6 +193,46 @@ body .post-inner {
   padding-top: 0;
 }
 
+/** Landing page - 3 images **/
+
+.page-content.landing-page .wp-block-cover {
+  margin: 0 !important;
+}
+
+.page-content.landing-page .wp-block-columns.has-background {
+   padding: 0;
+}
+
+.page-content.landing-page .wp-block-columns.has-background p {
+  color: #ddd;
+}
+
+.page-content.landing-page .wp-block-columns {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page-content.landing-page .wp-block-columns p {
+  padding: 15px;
+}
+
+.page-content.landing-page .wp-block-column:not(:first-child) {
+  margin-left: 10px;
+}
+
+.page-content.landing-page .wp-block-cover {
+  height: 100%;
+}
+
+.page-content.landing-page .wp-block-cover__inner-container {
+  left: 7%;
+  position: absolute;
+  top: 10%;
+}
+
+/** End Landing page - 3 images **/
+
+
 /** Property single **/
 
 .singular.single-property_listing .entry-header .status {
