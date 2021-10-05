@@ -230,6 +230,30 @@ body .post-inner {
   top: 10%;
 }
 
+
+.page-content.landing-page .alignwide {
+  max-width: 120rem;
+  width: calc(100vw - 1rem) !important;
+}
+
+
+@media (max-width: 782px) {
+  .page-content.landing-page .wp-block-column:not(:first-child) {
+    margin-left: 2em;
+  }
+
+
+  .page-content.landing-page .wp-block-column {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-content.landing-page .wp-block-column:not(:first-child) {
+    margin: 0 !important;
+  }
+}
+
 /** End Landing page - 3 images **/
 
 
