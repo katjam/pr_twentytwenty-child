@@ -230,6 +230,30 @@ body .post-inner {
   top: 10%;
 }
 
+
+.page-content.landing-page .alignwide {
+  max-width: 120rem;
+  width: calc(100vw - 1rem) !important;
+}
+
+
+@media (max-width: 782px) {
+  .page-content.landing-page .wp-block-column:not(:first-child) {
+    margin-left: 2em;
+  }
+
+
+  .page-content.landing-page .wp-block-column {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-content.landing-page .wp-block-column:not(:first-child) {
+    margin: 0 !important;
+  }
+}
+
 /** End Landing page - 3 images **/
 
 
@@ -351,12 +375,14 @@ body .post-inner {
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
   color:white;
   font-size: 1.1em;
-  text-transform: uppercase;
   margin: 0;
   padding: 1em 0;
   position: absolute;
   top: 0;
   left: 0;
+  min-width: 80px;
+  text-transform: uppercase;
+  text-align: center;
   transform: translateX(-30%) translateY(0%) rotate(-45deg);
   transform-origin: top right;
 }
