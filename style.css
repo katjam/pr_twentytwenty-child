@@ -351,12 +351,14 @@ body .post-inner {
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
   color:white;
   font-size: 1.1em;
-  text-transform: uppercase;
   margin: 0;
   padding: 1em 0;
   position: absolute;
   top: 0;
   left: 0;
+  min-width: 80px;
+  text-transform: uppercase;
+  text-align: center;
   transform: translateX(-30%) translateY(0%) rotate(-45deg);
   transform-origin: top right;
 }
