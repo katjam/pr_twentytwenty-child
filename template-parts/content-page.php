@@ -10,7 +10,6 @@
   <?php $display_completed = get_post_meta($post->ID, 'pr_completed_listing', true); ?>
   <?php if ($display_current || $display_completed): ?>
   <?php if ($display_current === 'on') { ?>
-    <h2 class="alignwide">Available Property:</h2>
   <?php $prop_query = new WP_Query(
     array(
       'post_type' => 'property_listing',
@@ -24,7 +23,6 @@
   );
   }
   if ($display_completed === 'on') { ?>
-    <h2 class="alignwide">Completed Projects:</h2>
   <?php $prop_query = new WP_Query(
     array(
       'post_type' => 'property_listing',
