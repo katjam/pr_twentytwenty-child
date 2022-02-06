@@ -298,12 +298,32 @@ body .post-inner {
 .property-card {
   background-color: var(--pr_lightgrey);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  padding: 2.8em;
+  font-size: 1.7rem;
+  padding: 1.8rem 2rem;
   transition: 0.3s;
 }
 
 .property-card h3 {
   text-align: left;
+}
+
+.property-card .wp-block-column.main-image {
+  width: 300px;
+}
+
+.property-card .wp-block-column.address {
+  width: 300px;
+}
+
+.property-card .wp-block-column.info {
+  max-width: 450px;
+}
+
+.property-card .button {
+  bottom: 2.6em;
+  font-size: 1.2rem;
+  margin: 0;
+  position: absolute;
 }
 
 @media (max-width: 782px) {
@@ -331,7 +351,7 @@ body .post-inner {
   .property_listing .featured-media .section-inner {
     width: 100%;
   }
-  
+
   .property_listing .minimal-padding {
     padding: 0.2rem;
   }
@@ -354,6 +374,15 @@ body .post-inner {
   margin: 1em 0.5em;
 }
 
+.property-card p,
+.property-card li {
+  line-height: 1.1;
+}
+
+.property-card .detail.address {
+  margin: 0 0 0.5em 0;
+}
+
 .detail.disposal {
   border-bottom: 2px solid var(--pr_grey);
   border-top: 2px solid var(--pr_grey);
@@ -362,12 +391,16 @@ body .post-inner {
   text-transform: uppercase;
 }
 
+.property-card .detail.disposal {
+  padding: 0.3em 0 0 0.2em;
+}
+
 .property-card {
   overflow: hidden;
 }
 
 .property-card .teaser-header {
-  padding-bottom: 1.8rem;
+  padding-bottom: 0;
 }
 
 .property-card .main-image .status {
@@ -418,6 +451,10 @@ body .post-inner {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+  }
+
+  .property-card .row {
+    flex-wrap: nowrap;
   }
 
 }

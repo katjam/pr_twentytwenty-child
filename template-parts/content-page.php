@@ -65,52 +65,47 @@ if (is_array($disposal_type_array)) {
               <span class="status"><?=$status?></span>
             <?php endif; ?>
             </div>
-            <div class="wp-block-column">
-              <h3 class="type"><?= $property_type ?? the_title() ?></h3>
-              <?php if ($property_address) :?>
-              <p class="detail address"><?= nl2br($property_address) ?></p>
-              <?php endif; ?>
-            </div>
-          </div>
-          <div>
-            <?php if ($disposal_type) :?>
-            <div class="detail disposal"><?= nl2br($disposal_type) ?></div>
-            <?php endif; ?>
-            <ul>
-              <?php if ($property_size) :?>
-              <li class="detail size"><?= $property_size ?></li>
-              <?php endif; ?>
-              <?php if ($property_price) :?>
-              <li class="detail price"><?= $property_price ?></li>
-              <?php endif; ?>
-              <?php if ($property_highlights) :?>
-              <li class="detail highlights"><?= $property_highlights ?></li>
-              <?php endif; ?>
-              <?php if ($property_highlights2) :?>
-              <li class="detail highlights"><?= $property_highlights2 ?></li>
-              <?php endif; ?>
-             <?php if ($property_teaser) :?>
-              <li class="detail teaser"><?= $property_teaser ?></li>
-              <?php endif; ?>
-            </ul>
-            <div class="row">
-              <div class="wp-block-column">
-                <a href="<?php the_permalink(); ?>" class="button">
-                See more property details <span class="fa fa-arrow-right"></span>
-                </a>
-              </div>
-              <?php if ($pdf && $pdf['url']) :?>
-              <div class="wp-block-column">
-                <a href="<?php echo $pdf['url'] ?>" class="button">
-                  Download PDF Brochure <span class="fa fa-file-pdf-o"></span>
+            <div class="wp-block-columns details">
+              <div class="wp-block-column address">
+                <h3 class="type"><?= $property_type ?? the_title() ?></h3>
+                <?php if ($property_address) :?>
+                <p class="detail address"><?= nl2br($property_address) ?></p>
+                <?php endif; ?>
+                <?php if ($disposal_type) :?>
+                <div class="detail disposal"><?= nl2br($disposal_type) ?></div>
+                <?php endif; ?>
+
+                  <a href="<?php the_permalink(); ?>" class="button">
+                    See more property details <span class="fa fa-arrow-right"></span>
                   </a>
               </div>
-            <?php endif; ?>
+              <div class="wp-block-column info">
+                <ul>
+                <?php if ($property_size) :?>
+                  <li class="detail size"><?= $property_size ?></li>
+                <?php endif; ?>
+                <?php if ($property_price) :?>
+                  <li class="detail price"><?= $property_price ?></li>
+                <?php endif; ?>
+                <?php if ($property_highlights) :?>
+                  <li class="detail highlights"><?= $property_highlights ?></li>
+                <?php endif; ?>
+                <?php if ($property_highlights2) :?>
+                  <li class="detail highlights"><?= $property_highlights2 ?></li>
+                <?php endif; ?>
+                <?php if ($property_teaser) :?>
+                  <li class="detail teaser"><?= $property_teaser ?></li>
+                <?php endif; ?>
+                </ul>
+                <?php if ($pdf && $pdf['url']) :?>
+                  <a href="<?php echo $pdf['url'] ?>" class="button">
+                    Download PDF Brochure <span class="fa fa-file-pdf-o"></span>
+                  </a>
+                <?php endif; ?>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-
           <?php
         endwhile;
       endif;
