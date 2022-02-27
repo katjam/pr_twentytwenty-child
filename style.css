@@ -307,28 +307,42 @@ body .post-inner {
   text-align: left;
 }
 
-.property-card .wp-block-column.main-image {
-  width: 300px;
+.property-card .details {
+  display: flex;
+  gap: 1.5em;
+  flex: 4;
+  flex-wrap: wrap;
 }
 
-.property-card .wp-block-column.address {
-  width: 300px;
+.property-card .main-image {
+  flex: 1;
 }
 
-.property-card .wp-block-column.info {
-  max-width: 450px;
+.property-card .address {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 255px;
+}
+
+.property-card .info {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 255px;
+  text-align: left;
 }
 
 .property-card .button {
-  bottom: 2.6em;
   font-size: 1.2rem;
-  margin: 0;
-  position: absolute;
+  max-width: 280px;
 }
 
 @media (max-width: 782px) {
   .property-card {
-    padding: 0.5em;
+    padding: 1.5em;
   }
 
   .property-card ul {
@@ -399,8 +413,11 @@ body .post-inner {
   overflow: hidden;
 }
 
-.property-card .teaser-header {
+.property-card .teaser-container {
   padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
 }
 
 .property-card .main-image .status {
