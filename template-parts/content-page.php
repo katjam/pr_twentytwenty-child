@@ -1,4 +1,12 @@
-<?php get_template_part( 'template-parts/entry-header' ); ?>
+  <?php $display_current = get_post_meta($post->ID, 'pr_current_listing', true); ?>
+  <?php $display_completed = get_post_meta($post->ID, 'pr_completed_listing', true); ?>
+
+<?php
+if (!($display_current || $display_completed)) {
+  // Only show title on non-listing pages
+  get_template_part( 'template-parts/entry-header' );
+}
+?>
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 
 <div class="entry-content page-content">
@@ -6,8 +14,6 @@
     <?php the_content(); ?>
   </div>
 
-  <?php $display_current = get_post_meta($post->ID, 'pr_current_listing', true); ?>
-  <?php $display_completed = get_post_meta($post->ID, 'pr_completed_listing', true); ?>
   <?php if ($display_current || $display_completed): ?>
   <?php if ($display_current === 'on') { ?>
   <?php $prop_query = new WP_Query(
