@@ -1,4 +1,12 @@
-<?php get_template_part( 'template-parts/entry-header' ); ?>
+  <?php $display_current = get_post_meta($post->ID, 'pr_current_listing', true); ?>
+  <?php $display_completed = get_post_meta($post->ID, 'pr_completed_listing', true); ?>
+
+<?php
+if (!$display_current && !$display_completed) {
+  // Only show title on non-listing pages
+  get_template_part( 'template-parts/entry-header' );
+}
+?>
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 
 <div class="entry-content page-content">
@@ -6,8 +14,6 @@
     <?php the_content(); ?>
   </div>
 
-  <?php $display_current = get_post_meta($post->ID, 'pr_current_listing', true); ?>
-  <?php $display_completed = get_post_meta($post->ID, 'pr_completed_listing', true); ?>
   <?php if ($display_current || $display_completed): ?>
   <?php if ($display_current === 'on') { ?>
   <?php $prop_query = new WP_Query(
@@ -58,15 +64,15 @@ if (is_array($disposal_type_array)) {
   $disposal_type = "";
 }
 ?>
-          <div class="row teaser-header">
-            <div class="wp-block-column main-image">
+          <div class="teaser-container">
+            <div class="main-image">
             <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "true"] ) ?>
             <?php if ($status && $status !== 'None'): ?>
               <span class="status"><?=$status?></span>
             <?php endif; ?>
             </div>
-            <div class="wp-block-columns details">
-              <div class="wp-block-column address">
+            <div class="details">
+              <div class="address">
                 <h3 class="type"><?= $property_type ?? the_title() ?></h3>
                 <?php if ($property_address) :?>
                 <p class="detail address"><?= nl2br($property_address) ?></p>
@@ -79,7 +85,7 @@ if (is_array($disposal_type_array)) {
                     See more property details <span class="fa fa-arrow-right"></span>
                   </a>
               </div>
-              <div class="wp-block-column info">
+              <div class="info">
                 <ul>
                 <?php if ($property_size) :?>
                   <li class="detail size"><?= $property_size ?></li>
