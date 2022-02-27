@@ -337,6 +337,7 @@ body .post-inner {
 
 .property-card .button {
   font-size: 1.2rem;
+  margin-bottom: 0;
   max-width: 280px;
 }
 
