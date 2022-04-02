@@ -109,22 +109,22 @@ if (is_array($disposal_type_array)) {
                 <div class="pdf-buttons">
                   <?php if ($pdf && $pdf['url']) :?>
                   <a href="<?php echo $pdf['url'] ?>" class="button">
-                      Download PDF Brochure <span class="fa fa-file-pdf-o"></span>
+                    Download PDF Brochure <span class="fa fa-file-pdf-o"></span>
                   </a>
                   <?php endif; ?>
                   <?php if ($pdf2 && $pdf2['url']) :?>
                   <a href="<?php echo $pdf2['url'] ?>" class="button">
-                      Download PDF 2 <span class="fa fa-file-pdf-o"></span>
+                    Download PDF 2 <span class="fa fa-file-pdf-o"></span>
                   </a>
                   <?php endif; ?>
                   <?php if ($pdf3 && $pdf3['url']) :?>
                   <a href="<?php echo $pdf3['url'] ?>" class="button">
-                      Download PDF 3 <span class="fa fa-file-pdf-o"></span>
+                    Download PDF 3 <span class="fa fa-file-pdf-o"></span>
                   </a>
                   <?php endif; ?>
                   <?php if ($pdf4 && $pdf4['url']) :?>
                   <a href="<?php echo $pdf4['url'] ?>" class="button">
-                      Download PDF 4 <span class="fa fa-file-pdf-o"></span>
+                    Download PDF 4 <span class="fa fa-file-pdf-o"></span>
                   </a>
                   <?php endif; ?>
                 </div>
