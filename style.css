@@ -295,6 +295,11 @@ body .post-inner {
 
 /** Property teaser **/
 
+/* Add extra padding to top card (no page heading here) */
+body .entry-content .post-inner + .alignwide.property-card {
+  margin-top: 4rem !important;
+}
+
 .property-card {
   background-color: var(--pr_lightgrey);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
