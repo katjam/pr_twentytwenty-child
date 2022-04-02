@@ -10,6 +10,13 @@
   $property_highlights = isset($details['highlights']) ? $details['highlights'] : '';
   $property_highlights2 = isset($details['highlights2']) ? $details['highlights2'] : '';
   $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
+  $pdf_button_text = get_post_meta( get_the_ID(),'pr_property_pdf_button', true) ? get_post_meta( get_the_ID(),'pr_property_pdf_button', true): "Download PDF Brochure";
+  $pdf2 = get_post_meta( get_the_ID(),'pr_property_pdf2', true);
+  $pdf2_button_text = get_post_meta( get_the_ID(),'pr_property_pdf2_button', true) ? get_post_meta( get_the_ID(),'pr_property_pdf2_button', true) : "Download PDF";
+  $pdf3 = get_post_meta( get_the_ID(),'pr_property_pdf3', true);
+  $pdf3_button_text = get_post_meta( get_the_ID(),'pr_property_pdf3_button', true) ? get_post_meta( get_the_ID(),'pr_property_pdf3_button', true) : "Download PDF";
+  $pdf4 = get_post_meta( get_the_ID(),'pr_property_pdf4', true);
+  $pdf4_button_text = get_post_meta( get_the_ID(),'pr_property_pdf4_button', true) ? get_post_meta( get_the_ID(),'pr_property_pdf4_button', true) : "Download PDF";
   $status = get_post_meta( get_the_ID(),'pr_property_listing_status', true);
   $disposal_type_array = unserialize(get_post_meta( get_the_ID(),'pr_property_disposal_type', true));
   $disposal_type = is_array($disposal_type_array) ? implode(' / ', $disposal_type_array) : '';
@@ -26,13 +33,36 @@
             <span class="status"><?=$status?></span>
           <?php endif; ?>
         </h3>
-        <?php if($pdf && $pdf['url'] != '' ): ?>
-        <div class="pdf">
-          <a href="<?php echo $pdf['url']; ?>" role="button" class="button">
-            <span class="fa fa-file-pdf-o"></span>Download PDF Brochure
-          </a>
+        <div class="pdf-buttons">
+          <?php if($pdf && $pdf['url'] != '' ): ?>
+          <div class="pdf">
+            <a href="<?php echo $pdf['url']; ?>" role="button" class="button">
+            <span class="fa fa-file-pdf-o"></span><?=$pdf_button_text ?>
+            </a>
+          </div>
+          <?php endif; ?>
+          <?php if($pdf2 && $pdf2['url'] != '' ): ?>
+          <div class="pdf">
+            <a href="<?php echo $pdf2['url']; ?>" role="button" class="button">
+              <span class="fa fa-file-pdf-o"></span><?=$pdf2_button_text ?>
+            </a>
+          </div>
+          <?php endif; ?>
+          <?php if($pdf3 && $pdf3['url'] != '' ): ?>
+          <div class="pdf">
+            <a href="<?php echo $pdf3['url']; ?>" role="button" class="button">
+              <span class="fa fa-file-pdf-o"></span><?=$pdf3_button_text ?>
+            </a>
+          </div>
+          <?php endif; ?>
+          <?php if($pdf4 && $pdf4['url'] != '' ): ?>
+          <div class="pdf">
+            <a href="<?php echo $pdf4['url']; ?>" role="button" class="button lastof4">
+              <span class="fa fa-file-pdf-o"></span><?=$pdf4_button_text ?>
+            </a>
+          </div>
+          <?php endif; ?>
         </div>
-        <?php endif; ?>
         <div class="detail summary">
           <h2><?= $property_address ?></h2>
           <h3><?= $property_size ?></h3>

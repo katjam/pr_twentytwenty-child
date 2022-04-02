@@ -291,6 +291,16 @@ body .post-inner {
   background: none;
 }
 
+.property_listing .pdf-buttons .button {
+  font-size: 1.45rem;
+  margin: 1em 1.2em 0 0;
+  width: 285px;
+}
+
+.property_listing .pdf-buttons .button.lastof4 {
+  margin-right: 0;
+}
+
 /** Property single end */
 
 /** Property teaser **/
@@ -342,8 +352,16 @@ body .entry-content .post-inner + .alignwide.property-card {
 
 .property-card .button {
   font-size: 1.2rem;
-  margin-bottom: 0;
-  max-width: 280px;
+  margin: 1em 1em 0 0;
+  width: 270px;
+}
+
+.property_listing .pdf-buttons,
+.property-card .pdf-buttons {
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 782px) {
