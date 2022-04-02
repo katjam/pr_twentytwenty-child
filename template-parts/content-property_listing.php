@@ -10,7 +10,7 @@
   $property_highlights = isset($details['highlights']) ? $details['highlights'] : '';
   $property_highlights2 = isset($details['highlights2']) ? $details['highlights2'] : '';
   $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
-  $pdf_button_text = get_post_meta( get_the_ID(),'pr_property_pdf_button', true) ? get_post_meta( get_the_ID(),'pr_property_pdf_button', true): "Download PDF";
+  $pdf_button_text = get_post_meta( get_the_ID(),'pr_property_pdf_button', true) ? get_post_meta( get_the_ID(),'pr_property_pdf_button', true): "Download PDF Brochure";
   $pdf2 = get_post_meta( get_the_ID(),'pr_property_pdf2', true);
   $pdf2_button_text = get_post_meta( get_the_ID(),'pr_property_pdf2_button', true) ? get_post_meta( get_the_ID(),'pr_property_pdf2_button', true) : "Download PDF";
   $pdf3 = get_post_meta( get_the_ID(),'pr_property_pdf3', true);
