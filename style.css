@@ -319,6 +319,7 @@ body .entry-content .post-inner + .alignwide.property-card {
 }
 
 .property-card h3 {
+  margin: 1.18rem 0;
   text-align: left;
 }
 
