@@ -131,6 +131,24 @@ section-inner {
 #site-header {
   background-color: var(--pr_blue);
   color: var(--pr_white);
+  position: fixed;
+  width: 100%;
+}
+
+#site-content {
+  padding-top: 240px;
+}
+
+
+@media (max-width: 999px) {
+  #site-header {
+    height: 220px;
+    z-index: 99;
+  }
+
+  #site-content {
+    padding-top: 220px;
+  }
 }
 
 #site-header .site-description {
@@ -146,7 +164,7 @@ section-inner {
 }
 
 .primary-menu-wrapper ul {
-  font-size: 1.15em;
+  font-size: 1.40em;
   justify-content: left;
   margin: auto;
   max-width: 120rem;
