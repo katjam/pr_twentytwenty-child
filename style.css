@@ -139,18 +139,6 @@ section-inner {
   padding-top: 240px;
 }
 
-
-@media (max-width: 999px) {
-  #site-header {
-    height: 220px;
-    z-index: 99;
-  }
-
-  #site-content {
-    padding-top: 220px;
-  }
-}
-
 #site-header .site-description {
   color: var(--pr_white);
   display: unset;
@@ -527,17 +515,7 @@ header .contact {
   text-align: right;
 }
 
-@media (max-width: 782px) {
-  header .header-titles {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 300px;
-  }
-  header .contact {
-    text-align: center;
-    padding-top: 1em;
-  }
-}
+
 
 header .contact a.linkedin {
   color: #0e76a8;
@@ -553,7 +531,7 @@ header .contact a:focus {
   text-decoration: underline;
 }
 
-header .contact div {
+header .contact .phone {
   padding: 10px 0;
 }
 
@@ -583,7 +561,63 @@ h1 {
   padding: 1em 0;
 }
 
+@media (max-width: 999px) {
+  #site-header {
+    height: 200px;
+    z-index: 99;
+  }
+
+  #site-content {
+    padding-top: 200px;
+  }
+
+  header .contact {
+    align-items: center;
+    display: flex;
+    padding-top: 5px;
+  }
+
+  header .contact .email-phone {
+    display: flex;
+  }
+
+  header .contact .phone,
+  header .contact .social {
+    padding: 0 0 0 15px;
+  }
+}
+
 @media (max-width: 782px) {
+  #site-header {
+    height: 180px;
+  }
+
+  #site-content {
+    padding-top: 180px;
+  }
+
+  header .header-inner {
+    padding: 0;
+  }
+
+  header .header-titles {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  header .site-logo {
+    text-align: center;
+    margin: auto;
+    width: 230px;
+  }
+
+  header .contact {
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+  }
+  
   #site-footer .section-inner {
     display: block;
     text-align: center;
@@ -593,5 +627,55 @@ h1 {
 
   #site-footer img {
     margin: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  #site-header {
+    height: 150px;
+  }
+
+  #site-content {
+    padding-top: 150px;
+  }
+
+  header .header-titles {
+    max-width: 200px;
+  }
+
+  #site-header .site-logo {
+    width: 160px;
+  }
+
+  #site-header .site-description {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 405px) {
+  #site-header {
+    height: 125px;
+  }
+
+  #site-content {
+    padding-top: 125px;
+  }
+
+  header .header-titles {
+    max-width: 200px;
+  }
+
+  #site-header .site-logo {
+    margin-bottom: -10px;
+    width: 140px;
+  }
+
+  #site-header .site-description {
+    font-size: 1.6rem;
+  }
+
+  #site-header .contact {
+    font-size: 1.6rem;
+    margin-top: -6px;
   }
 }
