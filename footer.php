@@ -32,7 +32,7 @@ echo date_i18n(
                     </div>
                 </div><!-- .footer-credits -->
                 <div class="rics-logo">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/REGULATED-BY-RICS-LOGO_WHITE.svg" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/REGULATED-BY-RICS-LOGO_WHITE.png" />
                 </div>
             </div><!-- .section-inner -->
 
