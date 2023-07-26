@@ -71,7 +71,7 @@ if (is_array($disposal_type_array)) {
   $disposal_type = "";
 }
 ?>
-          <div class="teaser-container">
+          <div class="teaser-container full-width">
             <div class="main-image">
             <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "true"] ) ?>
             <?php if ($status && $status !== 'None'): ?>
@@ -93,6 +93,71 @@ if (is_array($disposal_type_array)) {
                   </a>
               </div>
               <div class="info">
+                <ul>
+                <?php if ($property_size) :?>
+                  <li class="detail size"><?= $property_size ?></li>
+                <?php endif; ?>
+                <?php if ($property_price) :?>
+                  <li class="detail price"><?= $property_price ?></li>
+                <?php endif; ?>
+                <?php if ($property_highlights) :?>
+                  <li class="detail highlights"><?= $property_highlights ?></li>
+                <?php endif; ?>
+                <?php if ($property_highlights2) :?>
+                  <li class="detail highlights"><?= $property_highlights2 ?></li>
+                <?php endif; ?>
+                <?php if ($property_teaser) :?>
+                  <li class="detail teaser"><?= $property_teaser ?></li>
+                <?php endif; ?>
+                </ul>
+                <div class="pdf-buttons">
+                  <?php if ($pdf && $pdf['url']) :?>
+                  <a href="<?php echo $pdf['url'] ?>" class="button">
+                    <?=$pdf_button_text ?> <span class="fa fa-file-pdf-o"></span>
+                  </a>
+                  <?php endif; ?>
+                  <?php if ($pdf2 && $pdf2['url']) :?>
+                  <a href="<?php echo $pdf2['url'] ?>" class="button">
+                    <?=$pdf2_button_text ?> <span class="fa fa-file-pdf-o"></span>
+                  </a>
+                  <?php endif; ?>
+                  <?php if ($pdf3 && $pdf3['url']) :?>
+                  <a href="<?php echo $pdf3['url'] ?>" class="button">
+                    <?=$pdf3_button_text ?> <span class="fa fa-file-pdf-o"></span>
+                  </a>
+                  <?php endif; ?>
+                  <?php if ($pdf4 && $pdf4['url']) :?>
+                  <a href="<?php echo $pdf4['url'] ?>" class="button">
+                    <?=$pdf4_button_text ?> <span class="fa fa-file-pdf-o"></span>
+                  </a>
+                  <?php endif; ?>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="teaser-container compressed">
+            <div class="image-title">
+              <div class="main-image">
+              <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "true"] ) ?>
+              <?php if ($status && $status !== 'None'): ?>
+                <span class="status"><?=$status?></span>
+              <?php endif; ?>
+              </div>
+              <div class="title-type-address">
+                <h3 class="type"><?= $property_type ?? the_title() ?></h3>
+                <?php if ($property_address) :?>
+                  <p class="detail address"><?= trim(preg_replace("~\s*\R\s*~",", ", $property_address)) ?></p>
+                <?php endif; ?>
+                <?php if ($disposal_type) :?>
+                  <div class="detail disposal"><?= nl2br($disposal_type) ?></div>
+                <?php endif; ?>
+                <a href="<?php the_permalink(); ?>" class="button">
+                  See more property details <span class="fa fa-arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <div class="info">
                 <ul>
                 <?php if ($property_size) :?>
                   <li class="detail size"><?= $property_size ?></li>
