@@ -132,7 +132,6 @@ if (is_array($disposal_type_array)) {
                   </a>
                   <?php endif; ?>
                 </div>
-              </div>
             </div>
           </div>
 
