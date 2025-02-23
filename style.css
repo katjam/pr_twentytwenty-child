@@ -337,6 +337,18 @@ body .entry-content .post-inner + .alignwide.property-card {
   flex-wrap: wrap;
 }
 
+.property-card .empty.main-image {
+  background-color: var(--pr_grey);
+  border-radius: 10px;
+  color: var(--pr_white);
+  width: 100%;
+}
+
+.property-card .empty.main-image .empty-text {
+  margin: 50% auto;
+  text-align: center;
+}
+
 .property-card .main-image {
   flex: 1;
 }
@@ -468,6 +480,16 @@ body .entry-content .post-inner + .alignwide.property-card {
 
 .property-card .image-title {
   display: flex;
+}
+
+.property-card .teaser-container.compressed .empty.main-image {
+  flex: 1;
+  height: 117px;
+  width: 250px;
+}
+
+.property-card .teaser-container.compressed .empty.main-image .empty-text {
+  margin: 40px auto;
 }
 
 .property-card .teaser-container.compressed .main-image {
