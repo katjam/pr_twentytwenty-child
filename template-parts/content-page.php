@@ -131,7 +131,8 @@ if (is_array($disposal_type_array)) {
                     <?=$pdf4_button_text ?> <span class="fa fa-file-pdf-o"></span>
                   </a>
                   <?php endif; ?>
-                </div>
+</div>
+    </div>
             </div>
           </div>
 
@@ -199,7 +200,6 @@ if (is_array($disposal_type_array)) {
               </div>
             </div>
           </div>
-        </div>
         <?php
       endwhile;
     endif;
