@@ -54,6 +54,9 @@ $property_size = isset($details['size']) ? $details['size'] : '';
 $property_price = isset($details['price']) ? $details['price'] : '';
 $property_highlights = isset($details['highlights']) ? $details['highlights'] : '';
 $property_highlights2 = isset($details['highlights2']) ? $details['highlights2'] : '';
+$image_data = get_post_gallery(get_the_ID(), false);
+$has_images = $image_data && ! post_password_required() && count(explode(',',$image_data['ids'])) > 0;
+$has_image_class = $has_images ? "" : "empty";
 $property_teaser = isset($details['teaser']) ? $details['teaser'] : '';
 $pdf = get_post_meta( get_the_ID(),'pr_property_pdf', true);
 $pdf2 = get_post_meta( get_the_ID(),'pr_property_pdf2', true);
@@ -72,7 +75,10 @@ if (is_array($disposal_type_array)) {
 }
 ?>
           <div class="teaser-container full-width">
-            <div class="main-image">
+          <div class="main-image <?php echo $has_image_class?>">
+            <?php if (!$has_images): ?>
+              <div class="empty-text">Images coming soon</div>
+            <?php endif; ?>
             <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "true"] ) ?>
             <?php if ($status && $status !== 'None'): ?>
               <span class="status"><?=$status?></span>
@@ -138,7 +144,10 @@ if (is_array($disposal_type_array)) {
 
           <div class="teaser-container compressed">
             <div class="image-title">
-              <div class="main-image">
+              <div class="main-image <?php echo $has_image_class?>">
+              <?php if (!$has_images): ?>
+                <div class="empty-text">Images coming soon</div>
+              <?php endif; ?>
               <?php get_template_part( 'template-parts/lightbox', null, ['isteaser' => "true"] ) ?>
               <?php if ($status && $status !== 'None'): ?>
                 <span class="status"><?=$status?></span>
